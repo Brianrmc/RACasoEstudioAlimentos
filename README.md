@@ -1,6 +1,6 @@
 # RAUII
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0. Is a project for a class in comprehensive web development with my team create a web application that container a navbar with the menu-objects(compoentens direction)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
 
 ## Development server
 
