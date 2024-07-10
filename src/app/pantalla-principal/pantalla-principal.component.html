@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <h2>Registro de Nuevos Productos</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="productForm">
+    <div class="form-group">
+      <label for="nombre">Nombre del Producto</label>
+      <input id="nombre" class="form-control" formControlName="nombre">
+    </div>
+
+    <div class="form-group">
+      <label for="categoria">Categoría</label>
+      <select id="categoria" class="form-control" formControlName="categoria">
+        <option *ngFor="let cat of categorias" [value]="cat">{{ cat }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="precio">Precio</label>
+      <input id="precio" class="form-control" type="number" formControlName="precio">
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <textarea id="descripcion" class="form-control" formControlName="descripcion"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="cantidad">Cantidad en Stock</label>
+      <input id="cantidad" class="form-control" type="number" formControlName="cantidad">
+    </div>
+
+    <div class="form-group">
+      <label for="imagen">Imagen del Producto</label>
+      <input id="imagen" class="form-control" type="file" (change)="onFileChange($event)">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancelar</button>
+  </form>
+</div>
