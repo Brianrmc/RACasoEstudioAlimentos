@@ -6,7 +6,7 @@ import { InventarioComponent } from './inventario/inventario.component';
 import { RegistroComponent } from './registro/registro.component';
 
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: PantallaPrincipalComponent },
   { path: 'inventory', component: InventarioComponent },

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-menu-indice',
+  selector: 'app-menuindice',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, RouterModule],
   templateUrl: './menu-indice.component.html',
-  styleUrl: './menu-indice.component.scss'
+  styleUrls: ['./menu-indice.component.scss']
 })
-export class MenuIndiceComponent {
-
-}
+export class MenuIndiceComponent {}
