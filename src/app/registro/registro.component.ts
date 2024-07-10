@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-registro',
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './registro.component.html',
-  styleUrl: './registro.component.scss'
+  styleUrl: './registro.component.scss',
 })
 export class RegistroComponent {
   orderForm: FormGroup;
@@ -20,7 +25,7 @@ export class RegistroComponent {
       correo: ['', [Validators.required, Validators.email]],
       fecha: ['', Validators.required],
       detalles: [''],
-      metodoPago: ['', Validators.required]
+      metodoPago: ['', Validators.required],
     });
   }
 
@@ -33,5 +38,4 @@ export class RegistroComponent {
   onCancel() {
     this.orderForm.reset();
   }
-
 }

@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-inventario',
   standalone: true,
-  imports: [ReactiveFormsModule ],
+  imports: [ReactiveFormsModule],
   templateUrl: './inventario.component.html',
-  styleUrl: './inventario.component.scss'
+  styleUrl: './inventario.component.scss',
 })
 export class InventarioComponent {
   inventoryForm: FormGroup;
@@ -17,13 +22,11 @@ export class InventarioComponent {
       cantidadActual: [{ value: '', disabled: true }],
       cantidadNueva: ['', [Validators.required, Validators.min(0)]],
       fecha: ['', Validators.required],
-      notas: ['']
+      notas: [''],
     });
   }
 
-  ngOnInit(): void {
-    // Lógica para inicializar datos si es necesario
-  }
+  ngOnInit(): void {}
 
   onSubmit() {
     if (this.inventoryForm.valid) {

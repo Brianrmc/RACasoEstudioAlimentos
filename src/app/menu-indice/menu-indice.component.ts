@@ -7,6 +7,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './menu-indice.component.html',
-  styleUrls: ['./menu-indice.component.scss']
+  styleUrls: ['./menu-indice.component.scss'],
 })
 export class MenuIndiceComponent {}

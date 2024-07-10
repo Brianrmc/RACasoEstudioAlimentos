@@ -1,13 +1,18 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-pantalla-principal',
   standalone: true,
-  imports: [NgIf,NgFor,ReactiveFormsModule],
+  imports: [NgIf, NgFor, ReactiveFormsModule],
   templateUrl: './pantalla-principal.component.html',
-  styleUrl: './pantalla-principal.component.scss'
+  styleUrl: './pantalla-principal.component.scss',
 })
 export class PantallaPrincipalComponent {
   productForm: FormGroup;
@@ -20,7 +25,7 @@ export class PantallaPrincipalComponent {
       precio: ['', [Validators.required, Validators.min(0)]],
       descripcion: [''],
       cantidad: ['', [Validators.required, Validators.min(0)]],
-      imagen: ['']
+      imagen: [''],
     });
   }
 
@@ -40,5 +45,4 @@ export class PantallaPrincipalComponent {
       this.productForm.patchValue({ imagen: file });
     }
   }
-
 }

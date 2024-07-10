@@ -5,16 +5,15 @@ import { PantallaPrincipalComponent } from './pantalla-principal/pantalla-princi
 import { InventarioComponent } from './inventario/inventario.component';
 import { RegistroComponent } from './registro/registro.component';
 
-
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: PantallaPrincipalComponent },
   { path: 'inventory', component: InventarioComponent },
-  { path: 'sales', component: RegistroComponent }
+  { path: 'sales', component: RegistroComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

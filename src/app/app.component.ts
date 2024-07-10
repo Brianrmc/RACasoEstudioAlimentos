@@ -8,7 +8,7 @@ import { FooterComponent } from './footer/footer.component';
   standalone: true,
   imports: [RouterModule, MenuIndiceComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'RAUII';
